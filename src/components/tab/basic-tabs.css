@@ -1,0 +1,64 @@
+.tab-box {
+  display: flex;
+  height: 70px;
+  padding: 10px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.tab-box .tab-title {
+  color: var(--secondary-1, #0073E6);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.disable-tab {
+  display: none !important;
+  border-bottom: 2px solid var(--system-background, #F6F8FA) !important;
+  background: #FFF;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    width: 48% !important;
+    display: flex !important;
+    height: 50px !important;
+    padding: 10px 0px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex: 1 0 0 !important;
+    text-transform: none !important;
+  }
+}
+
+/* direct access css for tab */
+
+/* for tab space and text css */
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  border-bottom: 3px solid var(--secondary-1, #0073E6);
+  background: #FFF;
+  color: var(--secondary-1, #0073E6);
+  display: flex;
+  height: 70px;
+  padding: 10px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: none;
+}
+
+/* for disable button color change css */
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-disabled {
+  color: var(--text-85, #3E6493) !important;
+}

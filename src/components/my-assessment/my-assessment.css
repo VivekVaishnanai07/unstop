@@ -1,0 +1,805 @@
+/* my assessment  */
+
+.my-assessment-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.my-assessment-section .icon-section {
+  display: none;
+}
+
+.my-assessment-section .my-assessment-title {
+  color: var(--text-100, #1C4980);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 25.2px */
+}
+
+@media only screen and (max-width: 600px) {
+  .my-assessment-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  .my-assessment-section .my-assessment-title {
+    color: var(--text-100, #1C4980);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .my-assessment-section .icon-section {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .my-assessment-section .icon-section .search-icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: var(--text-white, #FFF);
+  }
+
+  .my-assessment-section .icon-section .search-icon .icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  .my-assessment-section .icon-section .filter-list-alt-icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: var(--text-white, #FFF);
+  }
+
+  .my-assessment-section .icon-section .filter-list-alt-icon .icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .my-assessment-section .icon-section .bar-chart-icon-box {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .my-assessment-section .icon-section .bar-chart-icon-box .bar-chart-icon {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .my-assessment-section .icon-section .bar-chart-icon-box .bar-chart-icon .icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .active-icon {
+    border-radius: 50px !important;
+    border: 1px solid var(--secondary-1, #0073E6) !important;
+    background: var(--secondary-5, #F2F8FE) !important;
+  }
+
+  /* according css */
+
+  .smooth-div {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
+  }
+
+  .smooth-div.visible {
+    opacity: 1;
+    height: 282px;
+    margin-bottom: 8px;
+  }
+}
+
+/* add new assessment section */
+
+.assessment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.assessment-section .assessment-list {
+  display: flex;
+  width: 1224px;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.assessment-section .assessment-list .new-assessment-box {
+  display: flex;
+  padding: 16px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px dashed var(--system-stroke-2, #DADCE0);
+  background: var(--system-background, #F6F8FA);
+}
+
+.assessment-section .assessment-list .new-assessment-box .add-assessment-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.assessment-section .assessment-list .new-assessment-box .add-assessment-box .add-assessment-icon {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 72px;
+  background: #FFF;
+}
+
+.assessment-section .assessment-list .new-assessment-box .add-assessment-box .add-assessment-icon .icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.assessment-section .assessment-list .new-assessment-box .add-assessment-box .add-new-assessment {
+  color: var(--text-100, #1C4980);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.assessment-section .assessment-list .new-assessment-box .dec {
+  align-self: stretch;
+  color: var(--text-100, #1C4980);
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.assessment-section .assessment-list .assessment-box {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid var(--system-stroke-2, #DADCE0);
+  background: var(--text-white, #FFF);
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .description-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .bag-icon {
+  width: 50px;
+  height: 50px;
+  fill: var(--accent-purple-light, #EBE8FD);
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .title {
+  color: var(--text-100, #1C4980);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 25.2px */
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .profession {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .profession .profession-type {
+  width: 26px;
+  height: 20px;
+  color: var(--text-100, #1C4980);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 19.6px */
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .profession .profession-details {
+  display: flex;
+  height: 22px;
+  align-items: center;
+  gap: 4px;
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .profession .profession-details .calender-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .profession .profession-details .date {
+  color: var(--primary-50, #8DA4BF);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .dot-icon {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  background: #FFF;
+}
+
+.assessment-section .assessment-list .assessment-box .assessment-box-details .dot-icon .icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .duration-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .duration-section .time-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: -1px;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .duration-section .time-section .number {
+  color: var(--text-100, #1C4980);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 19.6px */
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .duration-section .time-section .dec {
+  color: var(--text-100, #1C4980);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 16.8px */
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .share-section {
+  display: flex;
+  height: 30px;
+  padding: 2px 8px 2px 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 50px;
+  border: 1px solid var(--text-100, #1C4980);
+  background: var(--text-white, #FFF);
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .share-section .link-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .share-section .dec {
+  color: #1C4980;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profile-bg {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 5px 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  border-radius: 32.728px;
+  border: 1px solid var(--text-white, #FFF);
+  background: var(--pastel-neon-blue, #6548EE);
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profile-bg .dec {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profiles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profiles .profile-bg1 {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 5px 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  border-radius: 32.728px;
+  border: 1px solid var(--text-white, #FFF);
+  background: var(--pastel-neon-blue, #6548EE);
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profiles .profile-bg1 .dec1 {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profiles .profile-bg2 {
+  display: flex;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 5px 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  border-radius: 32.728px;
+  border: 1px solid var(--text-white, #FFF);
+  background: var(--pastel-royal-blue, #3079E1);
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profiles .profile-bg2 .dec2 {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profiles .profile-bg3 {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 5px 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  position: relative;
+  border-radius: 32.728px;
+  border: 1px solid var(--text-white, #FFF);
+  background: var(--accent-pink, #E9407A);
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profiles .profile-bg3 .dec3 {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .total-profile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .assessment-section .assessment-list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .assessment-section .assessment-list .new-assessment-box {
+    display: flex;
+    padding: 20px 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px dashed var(--system-stroke-2, #DADCE0);
+    background: var(--system-background, #F6F8FA);
+  }
+
+  .assessment-section .assessment-list .new-assessment-box .add-assessment-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .assessment-section .assessment-list .new-assessment-box .add-assessment-box .add-assessment-icon {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    padding: 7.143px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.143px;
+    border-radius: 51.429px;
+    background: #FFF;
+  }
+
+  .assessment-section .assessment-list .new-assessment-box .add-assessment-box .add-new-assessment {
+    color: var(--text-100, #1C4980);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .assessment-section .assessment-list .new-assessment-box .dec {
+    align-self: stretch;
+    color: var(--text-100, #1C4980);
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .assessment-section .assessment-list .assessment-box {
+    display: flex;
+    padding: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid var(--system-stroke-2, #DADCE0);
+    background: var(--text-white, #FFF);
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .description-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .bag-icon {
+    width: 50px;
+    height: 50px;
+    fill: var(--accent-purple-light, #EBE8FD);
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .title {
+    color: var(--text-100, #1C4980);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .profession {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .profession .profession-type {
+    width: 26px;
+    color: var(--text-100, #1C4980);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    padding-top: 2px;
+    /* 16.8px */
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .profession .profession-details {
+    display: flex;
+    height: 22px;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .profession .profession-details .calender-icon {
+    display: flex;
+    gap: 6px;
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .description-box .dec .profession .profession-details .date {
+    color: var(--text-50, #8DA4BF);
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .dot-icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 40px;
+    background: #FFF;
+  }
+
+  .assessment-section .assessment-list .assessment-box .assessment-box-details .dot-icon .icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .duration-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .duration-section .time-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .duration-section .time-section .number {
+    color: var(--text-100, #1C4980);
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .duration-section .time-section .dec {
+    color: var(--text-100, #1C4980);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 14px */
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .share-assessment {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .share-assessment .share-section {
+    display: flex;
+    height: 30px;
+    padding: 2px 8px 2px 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .share-assessment .share-section .dec {
+    color: #1C4980;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 16.8px */
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profile-bg {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 5px 6px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 32.728px;
+    border: 1px solid var(--text-white, #FFF);
+    background: var(--pastel-neon-blue, #6548EE);
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .profile-bg .dec {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .assessment-section .assessment-list .assessment-box .duration-details .share-assessment .profile-section .total-profile {
+    color: var(--text-100, #1C4980);
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: block !important;
+  }
+
+  .hide-icon {
+    display: none !important;
+  }
+
+  .clock-icon {
+    display: block !important;
+  }
+}
+
+.divider {
+  border-bottom: 1px dashed var(--system-stroke, #BACBD5);
+  width: 100%;
+}
+
+.clock-icon {
+  display: none;
+}

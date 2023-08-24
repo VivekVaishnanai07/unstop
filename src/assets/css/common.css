@@ -1,0 +1,15 @@
+/* mobile view appbar */
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+/* dashboard */
+
+@media only screen and (max-width: 600px){
+  .dashboard{
+    
+  }
+}

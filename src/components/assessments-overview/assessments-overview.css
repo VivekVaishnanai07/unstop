@@ -1,0 +1,356 @@
+.assessment-overview-section {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 0px 0px 12px 12px;
+  background: #FFF;
+  gap: 24px;
+}
+
+.assessment-overview-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.assessment-overview-section .container .main-section {
+  display: flex;
+  width: 1224px;
+  align-items: flex-start;
+  gap: 1px;
+  border-radius: 12px;
+  border: 1px solid var(--system-stroke-2, #DADCE0);
+}
+
+.assessment-overview-section .container .main-section .total-assessment-section {
+  display: flex;
+  width: 164px;
+  padding: 16px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.assessment-overview-section .container .main-section .total-assessment-section .content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.assessment-overview-section .container .main-section .total-assessment-section .content .icon-box {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--accent-purple-light, #EBE8FD);
+}
+
+.assessment-overview-section .container .main-section .total-assessment-section .content .title-text {
+  color: var(--text-100, #1C4980);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 28px */
+}
+
+.assessment-overview-section .container .main-section .candidates-section {
+  display: flex;
+  padding: 16px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+  align-self: stretch;
+  background: var(--text-white, #FFF);
+}
+
+.assessment-overview-section .container .main-section .candidates-section .content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.assessment-overview-section .container .main-section .candidates-section .content .icon-box {
+  width: 40px;
+  height: 40px;
+  fill: var(--accent-purple-light, #EBE8FD);
+}
+
+.assessment-overview-section .container .main-section .candidates-source-section {
+  display: flex;
+  width: 499px;
+  padding: 16px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
+  align-self: stretch;
+  background: var(--text-white, #FFF);
+}
+
+.assessment-overview-section .container .main-section .candidates-source-section .content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.assessment-overview-section .container .main-section .candidates-source-section .content .icon-box {
+  width: 40px;
+  height: 40px;
+  fill: var(--accent-purple-light, #EBE8FD);
+}
+
+.assessment-overview-section .container .main-section .total-purpose-section {
+  display: flex;
+  width: 188px;
+  padding: 16px 50px 16px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.assessment-overview-section .container .main-section .total-purpose-section .content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.assessment-overview-section .container .main-section .total-purpose-section .content .icon-box {
+  width: 40px;
+  height: 40px;
+  fill: var(--secondary-10, #E5F1FC);
+}
+
+.assessment-overview-section .container .main-section .total-purpose-section .content .title-text {
+  color: var(--text-100, #1C4980);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 28px */
+}
+
+/* common css */
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.assessment-overview-title {
+  color: var(--text-100, #1C4980);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 19.6px */
+}
+
+.header-title {
+  color: var(--text-100, #1C4980);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 25.2px */
+}
+
+.overview-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.overview-box .amount-box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.overview-box .amount-box .amount-number {
+  color: var(--text-100, #1C4980);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 28px */
+}
+
+.overview-box .amount-box .extra-amount-number {
+  color: var(--status-success, #05C165);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 16.8px */
+}
+
+.overview-box .amount-text {
+  color: #1C4980;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 16.8px */
+}
+
+@media only screen and (max-width: 600px) {
+  .assessment-overview-title {
+    color: var(--text-100, #1C4980);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 19.6px */
+  }
+
+  .assessment-overview-section {
+    margin-top: 52px;
+    gap: 0px !important;
+  }
+
+  .assessment-overview-section .container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .assessment-overview-section .container .main-section {
+    width: 100% !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 0px !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+  }
+
+  .assessment-overview-section .container .main-section .total-assessment-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    flex: 1 0 0 !important;
+  }
+
+  .assessment-overview-section .container .main-section .candidates-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    align-self: stretch !important;
+    order: 2 !important;
+    border-top: 1px solid var(--system-stroke-2, #DADCE0);
+    border-bottom: 1px solid var(--system-stroke-2, #DADCE0);
+    ;
+  }
+
+  .assessment-overview-section .container .main-section .candidates-source-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    align-self: stretch !important;
+    width: 100% !important;
+    order: 2 !important;
+    background: none !important;
+  }
+
+  .assessment-overview-section .container .main-section .total-purpose-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    flex: 1 0 0 !important;
+    order: 1 !important;
+  }
+
+  .overview-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+  }
+
+  .overview-box .amount-box {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .overview-box .amount-box .amount-number {
+    color: var(--text-100, #1C4980);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .overview-box .amount-box .extra-amount-number {
+    color: var(--status-success, #05C165);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 14px */
+  }
+
+  .overview-box .amount-text {
+    color: var(--text-100, #1C4980);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 14px */
+  }
+
+  .content {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .hide-div {
+    display: none !important;
+  }
+}
