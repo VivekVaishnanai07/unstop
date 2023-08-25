@@ -38,6 +38,8 @@
     border-radius: 0px !important;
     border-bottom: none !important;
     background: #fff !important;
+    left: 0px !important;
+    width: auto !important;
   }
 
   .header-divider {
@@ -68,4 +70,18 @@
     width: 100%;
   }
 
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    width: 636px;
+    left: 163px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  .header {
+    width: 636px !important;
+    left: 163px !important;
+  }
 }

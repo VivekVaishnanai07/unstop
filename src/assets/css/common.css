@@ -8,8 +8,20 @@
 
 /* dashboard */
 
-@media only screen and (max-width: 600px){
-  .dashboard{
-    
+.dashboard {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 0px 0px 12px 12px;
+  background: #FFF;
+  gap: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  .dashboard {
+    margin-top: 52px;
+    gap: 0px !important;
   }
 }

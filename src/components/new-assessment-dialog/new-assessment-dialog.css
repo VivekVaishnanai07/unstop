@@ -138,6 +138,16 @@
     background: #FFF !important;
   }
 
+  .dialog-header .dialog-title {
+    color: var(--text-100, #1C4980);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
   .dialog-header .icon-box {
     display: flex;
     width: 40px;
@@ -151,5 +161,15 @@
 
   .dialog-header .icon-box .close-icon {
     margin: 0 !important;
+  }
+
+  .dialog-body .dialog-field-box .dialog-field-title-box .dialog-field-title {
+    color: var(--text-100, #1C4980);
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
 }

@@ -51,8 +51,8 @@ const MyAssessment = ({ showDiv, toggleDiv }: any) => {
               </div>
             </Grid>
             {
-              assessmentList.map((data) => (
-                <Grid item xs={12} sm={6} md={4}>
+              assessmentList.map((data, index) => (
+                <Grid item xs={12} sm={6} md={4} key={index + 1}>
                   <div className='assessment-box'>
                     <div className='assessment-box-details'>
                       <div className='description-box'>
@@ -124,7 +124,7 @@ const MyAssessment = ({ showDiv, toggleDiv }: any) => {
           </Grid>
         </div>
       </div>
-      <NewAssessmentDialog showDiv={showDiv} open={open} setOpen={setOpen} />
+      <NewAssessmentDialog open={open} setOpen={setOpen} />
     </>
   )
 }
