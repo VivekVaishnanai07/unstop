@@ -113,21 +113,6 @@
     border: 1px solid var(--secondary-1, #0073E6) !important;
     background: var(--secondary-5, #F2F8FE) !important;
   }
-
-  /* according css */
-
-  .smooth-div {
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-    transition: opacity 0.5s ease, height 0.5s ease;
-  }
-
-  .smooth-div.visible {
-    opacity: 1;
-    height: 282px;
-    margin-bottom: 8px;
-  }
 }
 
 /* add new assessment section */
@@ -802,4 +787,16 @@
 
 .clock-icon {
   display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .assessment-section .assessment-list {
+    width: auto !important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  .assessment-section .assessment-list {
+    width: auto !important;
+  }
 }

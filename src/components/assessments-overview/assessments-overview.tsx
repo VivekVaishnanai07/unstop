@@ -19,7 +19,7 @@ const AssessmentsOverview = ({ showDiv }: any) => {
               <div className="title-text">34</div>
             </div>
           </div>
-          <Divider orientation="vertical" flexItem />
+          <Divider className='hide-divider' orientation="vertical" flexItem />
           <div className="candidates-section">
             <div className='assessment-overview-title'>Candidates</div>
             <div className='content'>

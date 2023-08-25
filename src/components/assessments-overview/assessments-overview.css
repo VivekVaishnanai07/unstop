@@ -337,4 +337,141 @@
   .hide-div {
     display: none !important;
   }
+
+  /* according css */
+
+  .smooth-div {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
+  }
+
+  .smooth-div.visible {
+    opacity: 1;
+    height: 282px;
+    margin-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .assessment-overview-section .main-section {
+    width: 100% !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 0px !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+  }
+
+  .assessment-overview-section .main-section .total-assessment-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: auto;
+    border-bottom: 1px solid var(--system-stroke-2, #DADCE0);
+  }
+
+  .assessment-overview-section .main-section .candidates-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    align-self: stretch !important;
+    order: 2 !important;
+    border-top: 1px solid var(--system-stroke-2, #DADCE0);
+    border-bottom: 1px solid var(--system-stroke-2, #DADCE0);
+    ;
+  }
+
+  .assessment-overview-section .main-section .candidates-source-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    align-self: stretch !important;
+    width: 100% !important;
+    order: 3 !important;
+    background: none !important;
+  }
+
+  .assessment-overview-section .main-section .total-purpose-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: auto;
+    border-bottom: 1px solid var(--system-stroke-2, #DADCE0);
+    border-right: 1px solid var(--system-stroke-2, #DADCE0);
+  }
+
+
+  .hide-divider {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  .assessment-overview-section .main-section {
+    width: 100% !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 0px !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+  }
+
+  .assessment-overview-section .main-section .total-assessment-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: auto;
+    border-bottom: 1px solid var(--system-stroke-2, #DADCE0);
+  }
+
+  .assessment-overview-section .main-section .candidates-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    align-self: stretch !important;
+    order: 2 !important;
+    border-top: 1px solid var(--system-stroke-2, #DADCE0);
+    border-bottom: 1px solid var(--system-stroke-2, #DADCE0);
+    ;
+  }
+
+  .assessment-overview-section .main-section .candidates-source-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    align-self: stretch !important;
+    width: 100% !important;
+    order: 3 !important;
+    background: none !important;
+  }
+
+  .assessment-overview-section .main-section .total-purpose-section {
+    display: flex !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: auto;
+    border-bottom: 1px solid var(--system-stroke-2, #DADCE0);
+    border-right: 1px solid var(--system-stroke-2, #DADCE0);
+  }
+
+
+  .hide-divider {
+    display: none !important;
+  }
 }
