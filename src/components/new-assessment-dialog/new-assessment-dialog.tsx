@@ -22,9 +22,12 @@ const Transition = React.forwardRef(function Transition(
 });
 
 export default function NewAssessmentDialog(props: any) {
-  const { open, showDiv, setOpen, window } = props;
+  const { open, setOpen } = props;
   const [purpose, setPurpose] = React.useState('');
   const [description, setDescription] = React.useState('');
+
+  let date = new Date();
+  let screenWidth = window.screen.width;
 
   const handlePurposeChange = (event: SelectChangeEvent) => {
     setPurpose(event.target.value as string);
@@ -37,8 +40,6 @@ export default function NewAssessmentDialog(props: any) {
   const handleClose = () => {
     setOpen(false);
   };
-  const date = new Date();
-  console.log(window);
   return (
     <Dialog
       open={open}
@@ -48,9 +49,9 @@ export default function NewAssessmentDialog(props: any) {
       aria-describedby="alert-dialog-slide-description"
     >
       <div className='dialog-header'>
-        <DialogTitle className='dialog-title'>{"Create new assessment"}</DialogTitle>
+        <DialogTitle className='dialog-title'>{screenWidth < 600 ? "Sub-Section Details" : "Create new assessment"}</DialogTitle>
         <div className='icon-box'>
-          <CloseIcon color={showDiv ? "#1C4980" : "#D63500"} className="close-icon" onClick={handleClose} />
+          <CloseIcon color={screenWidth < 600 ? "#D63500" : "#1C4980"} className="close-icon" onClick={handleClose} />
         </div>
       </div>
       <div className='dialog-body'>
@@ -154,7 +155,7 @@ export default function NewAssessmentDialog(props: any) {
         </div>
       </div>
       <div className='footer-button'>
-        <Button variant="contained" className='save-btn' onClick={handleClose}>Save</Button>
+        <Button variant="contained" className='save-btn' onClick={handleClose}>{screenWidth < 600 ? "Next" : "Save"}</Button>
       </div>
     </Dialog>
   );
